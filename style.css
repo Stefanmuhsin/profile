@@ -14,11 +14,19 @@
   text-align: center;
 }
 
-h1 {
+.card:hover {
+  transform: scale(2);
+  transform-origin: bottom;
+  transition: transform 0.3s;
+  transition: 5s;
+  rotate: 360deg;
+}
+
+h1, h2, h3 {
   font-weight: 100;
   font-style: normal;
   color: #0283E7;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .sns-icons {
@@ -47,11 +55,21 @@ body {
 .button-drab {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #1c87c9;
-  color: white;
+  background-color: #1877F2;
   text-decoration: none;
   border-radius: 4px;
   font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  animation: blinkColor 1s infinite;
+}
+@keyframes blinkColor {
+  0%, 100% {
+    color: red;
+  }
+  50% {
+    color: transparent;
+  }
 }
 
 .button-drab:hover {
